@@ -1,8 +1,10 @@
-// var number = document.getElementById("nos_sheds").value; //user input
+var number = document.getElementById("nos_sheds").value; //user input
+var container = document.getElementById("newslots"); //this is div
 
-function addshed(){
-  var number = document.getElementById("nos_sheds").value;
-  var container = document.getElementById("newslots"); //this is div
+
+function addshed(number){
+  // var number = document.getElementById("nos_sheds").value;
+  // var container = document.getElementById("newslots"); //this is div
 
   while(container.hasChildNodes()){
     container.removeChild(container.lastChild);
@@ -21,9 +23,20 @@ function addshed(){
   genttl.type="button";
   genttl.id= "genB";
   genttl.value = "Generate Total";
-  genttl.onclick = function(){totalMilk(number)};
+  genttl.onclick = function(){litreReport(number)};
   container.appendChild(genttl);
-};
+  
+}
+//diplay to html
+
+function litreReport(number){
+  // var container = document.getElementById("newslots"); //this is div
+
+  var totalLitres = document.createElement('p');
+  totalLitres.id="ttlmilk"
+  totalLitres.innerHTML="The total production is "+ totalMilk(number) +" litres per day";
+  container.appendChild(totalLitres);
+}
 
 function sumShed(num){
   sum = 0
@@ -37,8 +50,17 @@ function sumShed(num){
 function totalMilk(number){
   var totalMilk = [];
   total = 0;
-  for (i=0; i<number; i++){
-    totalMilk.push(document.getElementById("num"+i).value);
+  for (a=0; a<number; a++){
+    for (i=0; i<number; i++){
+      var slotmilk = document.getElementById("num"+i).value
+      totalMilk.push(slotmilk);
+
+      var totalLitres = document.createElement('p');
+      totalLitres.id="demo"
+      totalLitres.innerHTML="Your production in Shed "+ (a+1) +" = "+ slotmilk +" litres per day";
+      container.appendChild(totalLitres);
+    };
+    break
   };
   return sumShed(totalMilk);
 };
