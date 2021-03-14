@@ -1,12 +1,14 @@
 //First Report to Generate
 
-var number = document.getElementById("nos_sheds").value; //user input
+// var number = document.getElementById("nos_sheds").value; //user input
 var container = document.getElementById("newslots"); //this is div
 var times = document.getElementById("times").value; // brookside userinput
 // var timereport = document.getElementById("timereport"); 
 var reportweek = document.getElementById("reportweekly"); 
 var reportyear = document.getElementById("reportyearly"); 
 var reportmonth = document.getElementById("reportmonthly"); 
+
+var clicked = false; // to disable parts
 
 function addshed(number){
   // var number = document.getElementById("nos_sheds").value;
@@ -29,9 +31,20 @@ function addshed(number){
   genttl.type="button";
   genttl.id= "genB";
   genttl.value = "Generate Total";
-  genttl.onclick = function(){litreReport(number)};
+  genttl.onclick = function(){
+    // var clicked = false;
+
+    if (clicked === false){
+      litreReport(number);
+      clicked = true;
+    }else{
+      document.getElementById("genB").setAttribute('disabled', 'disabled');
+      document.getElementById("newslots").disabled = true;
+
+    }
+  };
   container.appendChild(genttl);
-  
+
 }
 //diplay to html
 
@@ -42,6 +55,9 @@ function litreReport(number){
   totalLitres.id="ttlmilk"
   totalLitres.innerHTML="The total production is "+ totalMilk(number) +" litres per day";
   container.appendChild(totalLitres);
+
+ clicked = true;
+
 }
 
 function sumShed(num){
@@ -68,14 +84,6 @@ function totalMilk(number){
   return sumShed(totalMilk);
 };
 
-// generate report on th brookside
-
-// function incomeOverTime(number){
-//   console.log((totalMilk(number) * 7)*45);// weekly
-//   console.log((totalMilk(number) * 365)*45);// yearly
-//   console.log((totalMilk(number) * 366)*45);// yearly leap
-// }
-
 function incomeOverTime(times=45){
   var default_no = times;
   if (times > 45){
@@ -87,6 +95,7 @@ function incomeOverTime(times=45){
     console.log("equal");
   }
 };
+
 function reportweekly(number){
     var week_ttl = (totalMilk(number) * 7)*45
     var week = document.createElement('p');
