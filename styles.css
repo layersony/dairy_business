@@ -100,3 +100,69 @@ input[type=button]{
   padding: 30px;
   box-sizing: content-box;
 }
+
+/* For Brookside and money made*/
+
+.sectionBrook{
+  background-color: rgb(196, 175, 170);
+  padding: 20px;
+  text-align: left;
+}
+
+.brook_profits{
+  font-size: 20px;
+  padding: 30px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-content: center;
+  flex-wrap: wrap;
+}
+.price_change{
+  padding: 20px;
+  background-color: white;
+  border-radius: 4px 4px 4px 4px;
+  box-shadow: 0px 0px 10px 1px;
+}
+
+.price_change input[type=text]{
+  background-color: rgba(19, 14, 14, 0.486);
+  width: 100px;
+  height: 35px;
+}
+.price_change input[type=button]{
+  background-color:burlywood;
+  width: 50px;
+  height: 38px;
+}
+#bro_input{
+  text-align: center;
+}
+
+/* for generator buttons */
+.genbtns{
+  box-shadow: 0px 0px 10px 1px;
+  padding: 20px;
+  text-align: center;
+  background-color: white;
+  border-radius: 4px 4px 4px 4px;
+}
+.genbtns input[type=button]{
+  background-color:burlywood;
+  width: 200px;
+  height: 38px;
+}
+/* for report part */
+
+.reportpt{
+  padding: 20px;
+  text-align: center;
+  background-color: rgba(22, 19, 19, 0.445);  
+  box-sizing: content-box;
+  width: 600px;
+  border-radius: 5px;
+  box-sizing: content-box;
+  margin-top: 2px;
+  box-shadow: 0px 2px 10px 1px;
+  color: #ffffff;
+}

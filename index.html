@@ -29,32 +29,41 @@
     </div>
   </section>
 
-  <div>
-    <p>Generate Report how much money you'll make.</p>
-    <p> Brookside Default buying rate is Ksh 45 if they is any change if the price click here </p>
-    <input class="no_sheds" id="times" type="number">
-    <input class="button" type="button" value="+" onclick="incomeOverTime(document.getElementById('times').value)">
+  <section class="sectionBrook">
+    <div class="brook_profits">
+      <div class="price_change">
+        <p>Generate Report how much money you'll make.</p>
+        <p> Brookside Default buying rate is Ksh 45 if they is any change of the price Add here </p>
+        <div id="bro_input">
+          <input type="text" class="no_sheds" id="times" type="number">
+          <input class="button" type="button" value="+" onclick="incomeOverTime(document.getElementById('times').value)"> 
+        </div> 
+      </div>
+      
+      <div class="genbtns">
+        <p>Generate a monthly and yearly report</p>
+        <p>you can choose either for Weekly and yearly</p>
+        <input type="button" id="monthly" value="Generate for Weekly" onclick="reportweekly(document.getElementById('nos_sheds').value)">
+        <input type="button" id="yearly" value="Generate for Yearly" onclick="reportyearly(document.getElementById('nos_sheds').value), formonths(document.getElementById('nos_sheds').value)">  
+      </div>
 
-    <p>Generate a monthly and yearly report</p>
-    <p>you can choose either for Weekly and yearly</p>
-    <input type="button" id="monthly" value="Generate for Weekly" onclick="reportweekly(document.getElementById('nos_sheds').value)">
-    <input type="button" id="yearly" value="Generate for Yearly" onclick="reportyearly(document.getElementById('nos_sheds').value), formonths(document.getElementById('nos_sheds').value)">
-    
-    <hr>
-    <div id="reportweekly"></div>
-    <div id="reportyearly"></div>
-    <div id="reportmonthly"></div>
-    <!-- <hr> -->
-    <!-- <input id="genButton" type="button" value="Total in on the periods" onclick="overtime()">
-    <div id="timereport"> -->
+      <div class="reportpt">
+        <div id="reportweekly"></div>
+        <div id="reportyearly"></div>
+        <div id="reportmonthly"></div>
+      </div>
+
+      <!-- <hr> -->
+      <!-- <input id="genButton" type="button" value="Total in on the periods" onclick="overtime()">
+      <div id="timereport"> -->
     </div>
-  </div>
-  <!-- <hr>
 
-  <div>
-    <p>Comparison of money you'll have every month and also the difference from the previous rate</p>
-    <input class="button" type="button" value="Generate Comparison" onclick="">
-  </div> -->
-  <script src="script.js"></script>
+    <!-- <hr>
+    <div>
+      <p>Comparison of money you'll have every month and also the difference from the previous rate</p>
+      <input class="button" type="button" value="Generate Comparison" onclick="">
+    </div> -->
+  </section>
 </body>
+<script src="script.js"></script>
 </html>
