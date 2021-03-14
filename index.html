@@ -16,16 +16,19 @@
     </div>
   </header>
 
-  <div class="sheds">
-    <p>Enter the number of Shed you have</p>
-    <input class="no_sheds" id="nos_sheds" type="number">
-    <input id="genButton" type="button" value="Add Shed(s)" onclick="addshed(document.getElementById('nos_sheds').value)">
-    <!-- <input id="genButton" type="button" value="Add Shed" onclick="addshed()"> -->
-    <div id="newslots">
+  <section class="sectionShed">
+    <div class="sheds">
+      <div class="para">
+        <p>Enter the number of Shed you have</p>
+        <input type="text" class="no_sheds" id="nos_sheds" type="number">
+        <input id="genButton" type="button" value="Add Shed(s)" onclick="addshed(document.getElementById('nos_sheds').value)">
+        <!-- <input id="genButton" type="button" value="Add Shed" onclick="addshed()"> -->
+      </div>
+      <div id="newslots">
+      </div>
     </div>
-  </div>
+  </section>
 
-  <hr>
   <div>
     <p>Generate Report how much money you'll make.</p>
     <p> Brookside Default buying rate is Ksh 45 if they is any change if the price click here </p>

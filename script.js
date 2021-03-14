@@ -23,7 +23,7 @@ function addshed(number){
     var input = document.createElement("input");
     input.type="text";
     input.name="shed " + i;
-    input.id= "num"+i
+    input.id= "num"+i;
     container.appendChild(input);
     container.appendChild(document.createElement("br"));
   }
