@@ -1,3 +1,50 @@
+*{
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  overflow-x: hidden;
+}
+
 body{
   background-color: blanchedalmond;
+  margin: 0;
+  text-align: center;
+}
+
+header{
+  background-color: black;
+  background-image: url("./images/header.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  position: relative;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 650px;
+  width: 100%;
+  overflow-x: hidden;
+}
+.header_content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  overflow-y: hidden;
+}
+.opac{
+  background-color: black;
+  width: auto;
+  height: 650px;
+  opacity: 0.7;
+}
+
+.header_content h1{
+  font-size: 80px;
+  padding: 10px;
+  font-family: cursive;
+}
+.header_content hr{
+  margin-top: -50px;
+  width: 50%;
 }
