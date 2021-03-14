@@ -14,7 +14,7 @@
   <div class="sheds">
     <p>Enter the number of Shed you have</p>
     <input class="no_sheds" id="nos_sheds" type="number">
-    <input id="genButton" type="button" value="Add Shed" onclick="addshed(document.getElementById('nos_sheds').value); this.onclick=null;">
+    <input id="genButton" type="button" value="Add Shed" onclick="addshed(document.getElementById('nos_sheds').value)">
     <!-- <input id="genButton" type="button" value="Add Shed" onclick="addshed()"> -->
     <div id="newslots">
     </div>
@@ -28,18 +28,17 @@
     <input class="button" type="button" value="+" onclick="incomeOverTime(document.getElementById('times').value)">
 
     <p>Generate a monthly and yearly report</p>
-    <p>you can choose either for monthly and yearly</p>
+    <p>you can choose either for Weekly and yearly</p>
+    <input type="button" id="monthly" value="Generate for Weekly" onclick="reportweekly(document.getElementById('nos_sheds').value)">
+    <input type="button" id="yearly" value="Generate for Yearly" onclick="reportyearly(document.getElementById('nos_sheds').value), formonths(document.getElementById('nos_sheds').value)">
+    
     <hr>
-    <input type="button" id="monthly" value="Monthly" onclick="reportweekly(document.getElementById('nos_sheds').value)">
-    <p>Click the monthly button to generate the report for a monthly income</p>
     <div id="reportweekly"></div>
-    <hr>
-    <input type="button" id="yearly" value="Yearly" onclick="reportyearly(document.getElementById('nos_sheds').value)">
-    <p>Click the monthly button to generate the report for a yearly income</p>
     <div id="reportyearly"></div>
-    <hr>
-    <input id="genButton" type="button" value="Total in on the periods" onclick="overtime()">
-    <div id="timereport">
+    <div id="reportmonthly"></div>
+    <!-- <hr> -->
+    <!-- <input id="genButton" type="button" value="Total in on the periods" onclick="overtime()">
+    <div id="timereport"> -->
     </div>
   </div>
   <hr>

@@ -6,7 +6,7 @@ var times = document.getElementById("times").value; // brookside userinput
 // var timereport = document.getElementById("timereport"); 
 var reportweek = document.getElementById("reportweekly"); 
 var reportyear = document.getElementById("reportyearly"); 
-
+var reportmonth = document.getElementById("reportmonthly"); 
 
 function addshed(number){
   // var number = document.getElementById("nos_sheds").value;
@@ -61,7 +61,8 @@ function totalMilk(number){
 
     var totalLitres = document.createElement('p');
     totalLitres.id="demo"
-    totalLitres.innerHTML="Your production in Shed "+ (i+1) +" = "+ slotmilk +" litres per day";
+    // totalLitres.innerHTML="Your production in Shed "+ (i+1) +" = "+ slotmilk +" litres per day";
+    totalLitres.innerHTML="Your production in Shed {not yet set} = "+ slotmilk +" litres per day";
     container.appendChild(totalLitres);
   };
   return sumShed(totalMilk);
@@ -86,29 +87,51 @@ function incomeOverTime(times=45){
     console.log("equal");
   }
 };
-
-// function overtime(time){
-//    if (document.getElementById("monthly")){
-//      console.log("monthly");
-//    }else if (document.getElementsById("yearly").selected = "true"){
-//      console.log("yearly")
-//    }
-// };
-
 function reportweekly(number){
-    console.log((totalMilk(number) * 30)*45);// weekly
-    var week_ttl = (totalMilk(number) * 30)*45
+    var week_ttl = (totalMilk(number) * 7)*45
     var week = document.createElement('p');
-    week.id="rptmon"
+    week.id="rptwk"
     week.innerHTML="Your Weekly income will be Ksh "+ Math.floor(week_ttl) ;
     reportweek.appendChild(week);
 };
 
 function reportyearly(number){
-  console.log((totalMilk(number) * 30)*45);// yearly
+  // console.log((totalMilk(number) * 30)*45);// yearly
   var year_ttl = (totalMilk(number) * 365)*45
   var year = document.createElement('p');
   year.id="rptyr"
   year.innerHTML="Your Yearly income will be Ksh "+ Math.floor(year_ttl);
   reportyear.appendChild(year);
 };
+
+function formonths(number){
+
+  var months = {
+    'January': 31,
+    'Febuary': 28,
+    'March': 31,
+    'April': 30,
+    'May': 31,
+    'June': 30,
+    'July': 31,
+    'August': 31,
+    'September': 30,
+    'October': 31,
+    'Novermber': 30,
+    'December': 31,
+  };
+
+  for (i in months){
+    // console.log(i);
+    // console.log(totalMilk(number));
+    // console.log(months[i]);
+    var mon_no = months[i];
+    // console.log(mon_no * totalMilk(number)) *45;
+
+    var mon = document.createElement('p');
+    mon.id="rptmon"
+    mon.innerHTML="Your income for "+ i + " is " + (mon_no * totalMilk(number))*45;
+    reportmonth.appendChild(mon);
+  };
+};
+
