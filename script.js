@@ -44,7 +44,6 @@ function addshed(number){
     }
   };
   container.appendChild(genttl);
-
 }
 //diplay to html
 
@@ -131,12 +130,7 @@ function formonths(number){
   };
 
   for (i in months){
-    // console.log(i);
-    // console.log(totalMilk(number));
-    // console.log(months[i]);
     var mon_no = months[i];
-    // console.log(mon_no * totalMilk(number)) *45;
-
     var mon = document.createElement('p');
     mon.id="rptmon"
     mon.innerHTML="Your income for "+ i + " is " + (mon_no * totalMilk(number))*45;
