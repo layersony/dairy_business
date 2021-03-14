@@ -23,3 +23,6 @@ Git
 
 ## Contact Details
 sammaingi5@gmail.com
+
+### License
+This Project is under the [MIT](LICENCE) license
