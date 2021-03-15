@@ -14,6 +14,12 @@ Follow this link https://layersony.github.io/dairy_business/
 
 It is hosted by github.
 
+### Setup
+To access this project on your local files, you can clone it using these steps
+1. Open your terminal
+1. Use this command to clone `$ git clone (https://github.com/layersony/dairy_business.git)
+1. This will clone the repositoty into your local folder
+1. __Enjoy :)__
 
 ## Technologies USed
 HTML

@@ -96,6 +96,7 @@ function reportyearly(number){
   year.id="rptyr"
   year.innerHTML="Your Yearly income will be Ksh "+ Math.floor(year_ttl);
   reportyear.appendChild(year);
+  document.getElementById("monthly").setAttribute('disabled', 'disabled');
 };
 
 function formonths(number){
