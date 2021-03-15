@@ -87,7 +87,8 @@ function reportweekly(number){
   week.id="rptwk"
   week.innerHTML="Your Weekly income will be Ksh "+ Math.floor(week_ttl);
   reportweek.appendChild(week);
-  document.getElementById("monthly").setAttribute('disabled', 'disabled');
+  document.getElementById("monthly").disabled = true;
+
 };
 
 function reportyearly(number){
@@ -96,7 +97,7 @@ function reportyearly(number){
   year.id="rptyr"
   year.innerHTML="Your Yearly income will be Ksh "+ Math.floor(year_ttl);
   reportyear.appendChild(year);
-  document.getElementById("monthly").setAttribute('disabled', 'disabled');
+  document.getElementById("yearly").disabled = true;
 };
 
 function formonths(number){
