@@ -25,6 +25,7 @@ header{
   height: 650px;
   width: 100%;
   overflow-x: hidden;
+  overflow-y: hidden;
 }
 .header_content {
   position: absolute;
@@ -51,6 +52,50 @@ header{
   width: 50%;
 }
 
+/* nav section */
+
+.nav {
+  overflow: hidden;
+  background-color: #333;
+  height: 45px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.tnav {
+  overflow: hidden;
+  background-color: #333;
+  height: 45px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  display: flex;
+  flex-direction: row;
+  justify-content:space-between;
+  align-content: center;
+}
+.tnav a {
+  /* float: right; */
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 20px;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.tnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.tnav a.active {
+  background-color: white;
+  color: black;
+}
 /* shed no section */
 
 .sectionShed{
