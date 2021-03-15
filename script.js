@@ -1,19 +1,15 @@
 //First Report to Generate
 
-// var number = document.getElementById("nos_sheds").value; //user input
 var container = document.getElementById("newslots"); //this is div
 var times = document.getElementById("times").value; // brookside userinput
-// var timereport = document.getElementById("timereport"); 
 var reportweek = document.getElementById("reportweekly"); 
 var reportyear = document.getElementById("reportyearly"); 
 var reportmonth = document.getElementById("reportmonthly"); 
 
 var clicked = false; // to disable parts
 
-function addshed(number){
-  // var number = document.getElementById("nos_sheds").value;
-  // var container = document.getElementById("newslots"); //this is div
 
+function addshed(number){
   while(container.hasChildNodes()){ // remove the input if there is any
     container.removeChild(container.lastChild);
   }
@@ -48,14 +44,12 @@ function addshed(number){
 //diplay to html
 
 function litreReport(number){
-  // var container = document.getElementById("newslots"); //this is div
-
   var totalLitres = document.createElement('p');
   totalLitres.id="ttlmilk"
   totalLitres.innerHTML="The total production is "+ totalMilk(number) +" litres per day";
   container.appendChild(totalLitres);
 
- clicked = true;
+  clicked = true;
 
 }
 
@@ -76,35 +70,27 @@ function totalMilk(number){
 
     var totalLitres = document.createElement('p');
     totalLitres.id="demo"
-    // totalLitres.innerHTML="Your production in Shed "+ (i+1) +" = "+ slotmilk +" litres per day";
-    totalLitres.innerHTML="Your production in Shed {not yet set} = "+ slotmilk +" litres per day";
+    totalLitres.innerHTML="<strong>Your production in Shed {not yet set} = <em>"+ slotmilk +"</em> litres per day</strong>";
     container.appendChild(totalLitres);
   };
   return sumShed(totalMilk);
 };
 
+//
 function incomeOverTime(times=45){
-  var default_no = times;
-  if (times > 45){
-    console.log(times);
-  }else if (times < 45){
-    console.log("less than");
-  }
-  else{
-    console.log("equal");
-  }
+  
 };
 
 function reportweekly(number){
-    var week_ttl = (totalMilk(number) * 7)*45
-    var week = document.createElement('p');
-    week.id="rptwk"
-    week.innerHTML="Your Weekly income will be Ksh "+ Math.floor(week_ttl) ;
-    reportweek.appendChild(week);
+  var week_ttl = (totalMilk(number) * 7)*45
+  var week = document.createElement('p');
+  week.id="rptwk"
+  week.innerHTML="Your Weekly income will be Ksh "+ Math.floor(week_ttl);
+  reportweek.appendChild(week);
+  document.getElementById("monthly").setAttribute('disabled', 'disabled');
 };
 
 function reportyearly(number){
-  // console.log((totalMilk(number) * 30)*45);// yearly
   var year_ttl = (totalMilk(number) * 365)*45
   var year = document.createElement('p');
   year.id="rptyr"
