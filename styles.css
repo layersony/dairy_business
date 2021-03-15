@@ -25,6 +25,8 @@ header{
   height: 650px;
   width: 100%;
   overflow-x: hidden;
+  overflow-y: hidden;
+
 }
 .header_content {
   position: absolute;
