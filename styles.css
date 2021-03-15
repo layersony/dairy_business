@@ -1,6 +1,7 @@
 *{
   font-family: Georgia, 'Times New Roman', Times, serif;
   overflow-x: hidden;
+  overflow-y: hidden;
 }
 
 body{
@@ -63,6 +64,10 @@ header{
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+}
+.nav img{
+  height: 45px;
+  width: 80px;
 }
 
 .tnav {
