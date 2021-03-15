@@ -46,7 +46,7 @@ function addshed(number){
 function litreReport(number){
   var totalLitres = document.createElement('p');
   totalLitres.id="ttlmilk"
-  totalLitres.innerHTML="The total production is "+ totalMilk(number) +" litres per day";
+  totalLitres.innerHTML="<strong>The total production is "+ totalMilk(number) +" litres per day</strong>";
   container.appendChild(totalLitres);
 
   clicked = true;
@@ -70,7 +70,7 @@ function totalMilk(number){
 
     var totalLitres = document.createElement('p');
     totalLitres.id="demo"
-    totalLitres.innerHTML="<strong>Your production in Shed {not yet set} = <em>"+ slotmilk +"</em> litres per day</strong>";
+    totalLitres.innerHTML="Your production in Shed "+ (i+1) +" = <em>"+ slotmilk +"</em> litres per day";
     container.appendChild(totalLitres);
   };
   return sumShed(totalMilk);
