@@ -1,5 +1,6 @@
 //First Report to Generate
 
+var number = document.getElementById('nos_sheds').value;
 var container = document.getElementById("newslots"); //this is div
 var times = document.getElementById("times").value; // brookside userinput
 var reportweek = document.getElementById("reportweekly"); 

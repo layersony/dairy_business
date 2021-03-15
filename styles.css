@@ -55,7 +55,12 @@ header{
   margin-top: -50px;
   width: 50%;
 }
-
+.sectionBrook h1{
+  text-align: center;
+  font-size: 35px;
+  text-decoration: underline;
+  font-family: cursive;
+}
 /* nav section */
 
 .nav {
@@ -85,7 +90,6 @@ header{
   align-content: center;
 }
 .tnav a {
-  /* float: right; */
   color: #f2f2f2;
   text-align: center;
   padding: 14px 16px;
@@ -111,6 +115,12 @@ header{
   background-color: white;
   padding: 30px;
   text-align: left;
+}
+.sectionShed h1{
+  text-align: center;
+  font-size: 35px;
+  text-decoration: underline;
+  font-family: cursive;
 }
 
 .sheds{
